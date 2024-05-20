@@ -1,4 +1,4 @@
-// ==UserScript==
+// ==UserScript== ORIGINAL
 // @name         Use ChitChat
 // @namespace    http://github.com/marcgamesons
 // @version      1.5.1
@@ -8,6 +8,7 @@
 // @author       https://github.com/MarcGamesons/twitch-userscript-use-chitchat
 // @license      MIT - https://opensource.org/licenses/MIT
 // @match        https://www.twitch.tv/*
+// @exclude      https://www.twitch.tv/moderator/*
 // @grant        none
 // ==/UserScript==
 
@@ -16,7 +17,7 @@ var onDOMReady = function () {
 
     function replaceTwitchChat() {
         // Get the container that contains the chat messages.
-        const chatContainer = document.querySelector(".chat-list--default");
+        const chatContainer = document.querySelector(".chat-list--other");
 
         // Delete all child nodes.
         while (chatContainer.firstChild) {
